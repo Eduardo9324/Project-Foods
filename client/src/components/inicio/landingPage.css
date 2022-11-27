@@ -1,0 +1,27 @@
+.title {
+  font-family: cursive;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  margin-left: 80px;
+  height: 20px;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.btnCom {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 210px;
+}
+
+.logo-food {
+  background-image: url(../../img/logo-foods.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;   
+  top: 0;
+  left: 0;
+}

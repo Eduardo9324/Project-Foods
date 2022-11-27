@@ -1,0 +1,25 @@
+body {
+ background: url(../../img/logo-foods.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+  top: 0;
+  left: 0;
+}
+
+.Nav {
+  color: white;
+  border: none;
+  /* cursor: pointer; */
+  padding:20px;
+  margin-top:10px;
+}
+
+.cardRender {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

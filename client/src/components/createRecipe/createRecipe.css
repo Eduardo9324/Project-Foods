@@ -1,0 +1,101 @@
+.btn-vol {
+  display: flex;
+  justify-content: center;
+}
+
+.vol {
+  background-color: #b4692c;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: 6px 5px 24px #666666;
+  color: #fafafa;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 50px;
+  display: flexbox;
+  justify-content: center;
+  margin-left: 75px;
+}
+
+.content-general {
+  width: 350px;
+  height: 360px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all .2s;
+  margin-left: 485px;
+  text-align: center;
+  display: flexbox;
+  justify-content: center;
+}
+
+.title-recipe {
+  color: white;
+  font-family: cursive;
+  text-align: center;
+}
+
+.formulario {
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+
+.lab-name {
+  /* text-align: left; */
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+.lab-summary {
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+.lab-hs {
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+.lab-steps {
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+/* .btn-create {
+  text-align: center;
+  margin-top: 60px;
+} */
+
+.btn-c {
+  background-color: #b4692c;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: 6px 5px 24px #666666;
+  color: #fafafa;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 50px;
+  display: flexbox;
+  justify-content: center;
+}
