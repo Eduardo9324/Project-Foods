@@ -29,13 +29,13 @@ const Detail = () => {
           {myRecipe ? (
             <div className="card-img">
               <h1 className="name">{myRecipe.name}</h1>
-              <img className="img" src={myRecipe.image} />
+              <div className="containImage">
+                <img className="img" src={myRecipe.image} />
+              </div>
               <h2 className="types">Type: {myRecipe.type}</h2>
               <h2 className="dietss">
-                Diet:{" "}
-                {myRecipe.diets?.map((f) => (
-                  <span>{f.name}</span>
-                ))}
+                Diets:
+                {myRecipe.diets && myRecipe.diets.map((f) => <p>{f.name}</p>)}
               </h2>
               <h2 className="hs">Health Score: {myRecipe.healthScore}</h2>
               <h3 className="summary">Summary: {myRecipe.summary}</h3>

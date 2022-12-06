@@ -6,7 +6,7 @@ const ButtonCreate = () => {
   return (
     <React.Fragment>
       <div>
-        <Link to={"/diets"}>
+        <Link to={"/create"}>
           <button className="btn-create">Crear</button>
         </Link>
       </div>

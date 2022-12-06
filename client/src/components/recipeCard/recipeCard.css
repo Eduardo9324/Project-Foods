@@ -21,7 +21,7 @@ align-items: center;
 
 .name {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: rgb(red, green, blue);
   padding-top: 15px;
   font-family: cursive;
   position: relative;
@@ -36,7 +36,7 @@ align-items: center;
 
 .type-diet {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;;
   padding-bottom: 40px;
   font-family: cursive;
   position: relative;
@@ -44,7 +44,7 @@ align-items: center;
 
 .healthScore {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;;
   padding-top: 15px;
   font-family: cursive;
 }

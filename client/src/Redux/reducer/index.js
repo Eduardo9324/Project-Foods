@@ -16,7 +16,8 @@ const initialState = {
   allRecipes: [],
   recipes: [],
   diets: [],
-  detail: []
+  detail: [],
+  /* create: [] */
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -86,16 +87,32 @@ export default function rootReducer(state = initialState, action) {
       };
     //PENDIENTE POR PROBAR
     case FILTER_CREATE:
-      const filtreByCreate = state.allRecipes
-      const createForFilter = action.payload === 'created' ? filtreByCreate.filter(e => e.createInDb) : filtreByCreate.filter(e => !e.createInDb);
+      const filtreByCreate = state.recipes
+      const createForFilter =
+        action.payload === "created"
+          ? filtreByCreate.filter((e) => e.createInDb)
+          : filtreByCreate.filter((e) => !e.createInDb);
+      /* const filterCreate = state.recipes.filter(e => {
+        return e.createInDb.find(i => {
+          return i.name === action.payload
+        })
+      }) */
       return {
         ...state,
-        recipes: createForFilter,
+        allRecipes: createForFilter.length > 0 ? createForFilter : filtreByCreate /* filterCreate */,
       };
     
     case CREATE_RECIPE:
+      /* const totalRes = state.recipes;
+      const resCreate =
+        action.payload === "All"
+          ? totalRes
+          : totalRes.filter((e) =>
+              e.createInDb.find((i) => i.name === action.payload)
+            ); */
       return {
-        ...state
+        ...state,
+        /* create: resCreate */
       };
     
     case GET_DETAILS:

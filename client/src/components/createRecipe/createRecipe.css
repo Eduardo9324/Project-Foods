@@ -22,13 +22,13 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 50px;
-  display: flexbox;
+  display: inline-flexbox;
   justify-content: center;
-  margin-left: 75px;
+  /* margin-left: 90px; */
 }
 
 .content-general {
-  width: 350px;
+  /* width: 350px;
   height: 360px;
   background-color: #1a1a1a;
   border-radius: 20px;
@@ -36,7 +36,58 @@
   margin-left: 485px;
   text-align: center;
   display: flexbox;
-  justify-content: center;
+  justify-content: center; */
+  text-align: center;
+  width:400px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:rgba(68, 54, 13, 0.852);
+  display: block;
+}
+
+.divName {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+  width: 100px;
+}
+
+.divSummary {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+  width: 100px;
+}
+
+.divType {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+}
+
+.divHs {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+}
+
+.divSteps {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+}
+
+.divImage {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+}
+
+.divDiets {
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
 }
 
 .title-recipe {
@@ -55,11 +106,13 @@
   /* text-align: left; */
   padding-right: 15px;
   margin-right: 10px;
+  width: 100px;
 }
 
 .lab-summary {
   padding-right: 15px;
   margin-right: 10px;
+  width: 100px;
 }
 
 .lab-hs {
@@ -71,11 +124,6 @@
   padding-right: 15px;
   margin-right: 10px;
 }
-
-/* .btn-create {
-  text-align: center;
-  margin-top: 60px;
-} */
 
 .btn-c {
   background-color: #b4692c;
@@ -98,4 +146,33 @@
   margin-top: 50px;
   display: flexbox;
   justify-content: center;
+}
+
+/* .btn-create {
+  text-align: center;
+  margin-top: 10px;
+} */
+
+.lii {
+  font-family: cursive;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.inputAll {
+  margin-left: 20px;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 15px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 115px;
+}
+
+.errors {
+  text-align: justify;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 118px;
+  color: lightblue;
 }

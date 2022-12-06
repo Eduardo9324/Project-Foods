@@ -33,19 +33,27 @@
   /* display: flex;
   justify-content: center; */
   position: relative;
+  width: 600px;
 }
 
 .card-img {
-  margin-top: 60px;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 50px;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 35px;
   width: 380px;
   height: auto;
   border-radius: 30px;
-  background: #e0e0e0;
+  background: #e0e0e07a;
   box-shadow: 15px 15px 30px #bebebe,
   -15px -15px 30px #ffffff;
   position: relative;
+  width: 700px;
+  backdrop-filter: blur(10px); /* efecto de vidrio */
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-right: 1px solid rgba(25,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .name {
@@ -56,17 +64,27 @@
   position: relative;
 }
 
+.containImage img{
+    object-fit: cover;
+    height: 250px;
+    width: 610px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
 .img {
   width: 300px;
   margin-left: 35px;
   border-radius: 50px;
   height: 160px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .types {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;
   padding-top: 1px;
   font-family: cursive;
   position: relative;
@@ -74,7 +92,7 @@
 
 .dietss {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;
   padding-top: 1px;
   font-family: cursive;
   position: relative;
@@ -82,7 +100,7 @@
 
 .hs {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;
   padding-top: 1px;
   font-family: cursive;
   position: relative;
@@ -90,7 +108,7 @@
 
 .summary {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;
   padding-top: 1px;
   font-family: cursive;
   position: relative;
@@ -98,7 +116,7 @@
 
 .steps {
   text-align: center;
-  color: rgb(255, 0, 0);
+  color: darkblue;
   padding-top: 1px;
   font-family: cursive;
   position: relative;

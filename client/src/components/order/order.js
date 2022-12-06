@@ -12,7 +12,7 @@ import {
 
 const Order = () => {
   const dispatch = useDispatch();
-  const diets = useSelector((state) => state.diets);
+  const created = useSelector((state) => state.recipes);
 
   const handleFilterByDiet = (e) => {
     dispatch(filterByDiet(e.target.value))
@@ -27,7 +27,7 @@ const Order = () => {
   };
 
   const handleFilterCreate = (e) => {
-    e.preventDefault();
+    /* e.preventDefault(); */
     dispatch(filterCreate(e.target.value))
   }; 
 
@@ -60,15 +60,18 @@ const Order = () => {
           <option value="des">Menos saludables</option>
         </select>
 
-        <select name="select" onChange={(e) => handleFilterCreate(e)}>
-          <option value="created">Recetas creadas</option>
-          {diets.map((e, index) => {
+        <select onChange={(e) => handleFilterCreate(e)}>
+          <option value="All">Todas</option>
+          <option value="created">Creadas</option>
+          <option value="api">Api</option>
+          {/* {created.length && created.map((e) => {
+            console.log(created)
             return (
-              <option key={index} value={e.name}>
+              <option key={e.id} value={e.name}>
                 {e.name}
               </option>
             )
-          })}
+          })} */}
         </select>
       </div>
     </React.Fragment>

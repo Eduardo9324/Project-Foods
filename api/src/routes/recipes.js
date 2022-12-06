@@ -52,4 +52,30 @@ router.get('/:id', async (req, res, next) => {
 
 
 
+router.post("/", async (req, res, next) => {
+  try {
+    const { name, summary, type, healthScore, steps, image, createInDb, diets } = req.body;
+
+    const createRecipe = await Recipe.create({
+      name,
+      summary,
+      type,
+      healthScore,
+      steps,
+      image,
+      createInDb,
+    })
+
+
+    await createRecipe.addDiet(diets)
+    res.send("Todo Bien !!!");
+
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
+
+
+
 module.exports = router;

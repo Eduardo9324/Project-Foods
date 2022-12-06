@@ -13,6 +13,7 @@ const SearchBar = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    /* if (search !== e.target.value) alert("Recipe not found"); */
     dispatch(searchRecipe(search))
   };
 
@@ -25,10 +26,10 @@ const SearchBar = () => {
   return (
     <React.Fragment>
       <div>
-        <form className="searchBar" onSubmit={onSubmit}>
+        <form className="searchBar" onSubmit={(e) => onSubmit(e)}>
           <input
             type="text"
-            onChange={onInputChange}
+            onChange={(e) => onInputChange(e)}
             value={search}
             placeholder="Search by name"
           />

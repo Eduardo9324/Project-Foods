@@ -92,10 +92,10 @@ export const getDiets = () => {
 };
 
 //Esta action crea una receta en la ruta 
-export const createRecipe = (payload) => {
+export const createRecipes = (payload) => {
   return async (dispatch) => {
     try {
-      const cr = await axios.post("http://localhost:3001/api/recipes", payload);
+      const cr = await axios.post("http://localhost:3001/api/recipes", payload)
       console.log(cr)
       return dispatch({
         type: CREATE_RECIPE,

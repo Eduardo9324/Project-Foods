@@ -60,7 +60,7 @@ const getAllInfo = async () => {
   try {
     const infoApi = await getInfoApi()
     const infoDb = await getInfoByDb()
-    const allInfo = infoApi.concat(infoDb)
+    const allInfo = infoDb.concat(infoApi);
     return allInfo
 
   } catch (error) {
@@ -126,7 +126,7 @@ const getAllDiets = async () => {
     ); */
     const dietsApi = food;
 
-    const dietsData = dietsApi./* data. */results.map(e => e.diets)
+    const dietsData = dietsApi/* .data */.results.map(e => e.diets)
     const filterDiets2 = new Set([...dietsData.flat()]);
     const filterDiets = [...filterDiets2, "vegetarian"];
     filterDiets.forEach((e) => {
