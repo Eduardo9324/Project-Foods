@@ -15,6 +15,10 @@ const SearchBar = () => {
     e.preventDefault();
     /* if (search !== e.target.value) alert("Recipe not found"); */
     dispatch(searchRecipe(search))
+
+    if (!search) {
+      alert("Accion invalida !!!")
+    }
   };
 
   const onInputChange = (e) => {

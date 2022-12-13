@@ -28,11 +28,11 @@ module.exports = (sequelize) => {
       },
       healthScore: {
         type: DataTypes.INTEGER,
-        /* validate: {
+        validate: {
           min: 0,
           max: 100,
         },
-        defaultValue: 0, */
+        defaultValue: 0,
       },
       steps: {
         type: DataTypes.STRING,

@@ -226,9 +226,9 @@ const CreateRecipe = () => {
                 onChange={(e) => handleSelect(e)}
               >
                 {diets.length &&
-                  diets.map((e) => (
-                    <option key={e.name} value={e.id}>
-                      {e.name}
+                  diets.map((e, index) => (
+                    <option key={index} value={e.id}>
+                      {e.name} - {e.id}
                     </option>
                   ))}
               </select>

@@ -76,6 +76,24 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// DEBO REALIZAR RURA DE PUT Y DELETE
+/* router.delete("/", async (req, res, next) => {
+  const { id } = req.params
+  let ids = []
+  try {
+    if (!id) {
+      res.send("No hay id !!! ")
+    } else {
+      const idDelete = ids.find((p) => p.id === id)
+    }
+
+    if()
+  } catch (error) {
+    console.log(error)
+    next(error)
+  }
+}) */
+
 
 
 module.exports = router;

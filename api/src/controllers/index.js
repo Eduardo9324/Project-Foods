@@ -4,16 +4,16 @@ const axios = require("axios");
 const router = Router();
 const { Recipe, Diet } = require("../db");
 const { API_KEY } = process.env;
-const food = require("../dbFood.js");
+/* const food = require("../dbFood.js"); */
 
 //OBTENER DATA DE LA API
 const getInfoApi = async () => {
-  /* const getInfoFood = await axios.get(
+  const getInfoFood = await axios.get(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100` 
-  ); */
-  const getInfoFood = food;
+  );
+  /* const getInfoFood = food; */
   try {
-    const allInfoFood = await getInfoFood./* data. */results.map((e) => ({
+    const allInfoFood = await getInfoFood.data.results.map((e) => ({
       id: e.id,
       name: e.title,
       image: e.image,
@@ -21,7 +21,7 @@ const getInfoApi = async () => {
       diets: e.diets.map((h) => {
         return { name: h };
       }),
-      summary: e.summary.replace(/(<([^>]+)>)/gi, ""),
+      summary: e.summary.replace(/(<([^>]+)>)/gi, ""), //quita tags html
       healthScore: e.healthScore,
       steps: e.analyzedInstructions.map((f) =>
         f.steps.map((g) => g.step).join(" ")
@@ -121,12 +121,12 @@ const getIdByDb = async (id) => {
 //OBTENER DIETAS
 const getAllDiets = async () => {
   try {
-    /* const dietsApi = await axios.get(
+    const dietsApi = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
-    ); */
-    const dietsApi = food;
+    );
+    /* const dietsApi = food; */
 
-    const dietsData = dietsApi/* .data */.results.map(e => e.diets)
+    const dietsData = dietsApi.data.results.map(e => e.diets)
     const filterDiets2 = new Set([...dietsData.flat()]);
     const filterDiets = [...filterDiets2, "vegetarian"];
     filterDiets.forEach((e) => {
